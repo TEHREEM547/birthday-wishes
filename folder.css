@@ -1,0 +1,162 @@
+/*  page 2  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fce4ec;
+}
+
+/* Main Container */
+
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 20px;
+    background-color: rgba(250, 157, 86, 0.691);
+}
+    /* background:
+    radial-gradient(circle at 10% 15%, #ffffff 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, #f4bc67 0%, transparent 25%),
+    linear-gradient(135deg, #f9dce5, #fceef2, #a8f8a4);
+} */
+
+/* Header */
+
+.header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.top-heading {
+    color: #b66c86;
+    font-size: 17px;
+    letter-spacing: 7px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    color: #5c3242;
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+.header h2{
+    font-size: 30px;
+    color: #b66c86;
+      font-family: 'Pacifico', cursive;
+}
+/* 
+.top-heading p{
+     font-family: 'Pacifico', cursive;
+       color: #5c3242;
+} */
+ 
+.description {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #88566a;
+    font-size: 18px;
+    margin-bottom: 22px;
+}
+
+.description span{
+    color: #b66c86;
+}
+/* Click Me Button */
+
+.click-btn {
+    display: inline-block;
+    padding: 12px 35px;
+    background: #9b9d22db;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+    box-shadow: 0 5px 15px #d98ba8;
+
+    transition: 0.3s;
+}
+
+.click-btn:hover {
+    background: #a9144b;
+    transform: scale(1.08);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    color: #b14f75;
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 767px) {
+
+    .header h1 {
+        font-size: 32px;
+    }
+
+    .top-heading {
+        font-size: 13px;
+    }
+
+    .templates {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .card {
+        padding: 5px;
+    }
+
+    .card img {
+        height: 120px;
+    }
+
+    .card h3 {
+        font-size: 10px;
+    }
+
+    .click-btn {
+        padding: 10px 25px;
+        font-size: 13px;
+    }
+}
+
+
+
+.last-button {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.last-button a {
+    display: inline-block;
+    padding: 15px 45px;
+    background: #e94d87;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px #d98ba8;
+    transition: 0.3s;
+}
+
+.last-button a:hover {
+    background: #a9144b;
+    transform: scale(1.08);
+}

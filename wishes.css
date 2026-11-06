@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #160d17, #3b1c35, #17101d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Main Collage Animation */
+.collage {
+    width: 320px;
+    height: 530px;
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 3px solid #e8c6d8;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(255, 150, 210, 0.4);
+
+    animation: collageEntry 1.5s ease forwards;
+}
+
+/* Photo Styling */
+.photo {
+    width: 100%;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+
+    opacity: 0;
+    animation: photoEntry 1s ease forwards;
+}
+
+/* Individual Pictures */
+.photo1 {
+    background-image: url("images/pic 1.jpg");
+    animation-delay: 0.4s;
+}
+
+.photo2 {
+    background-image: url("images/pic 2.webp");
+    animation-delay: 0.8s;
+}
+
+.photo3 {
+    background-image: url("images/pic 3.jpg");
+    animation-delay: 1.2s;
+}
+
+.photo4 {
+    background-image: url("images/pic 4.avif");
+    animation-delay: 1.6s;
+}
+
+/* Letters */
+.letter {
+    position: absolute;
+    color: white;
+    font-size: 110px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    text-shadow: 2px 2px 8px #000;
+
+    opacity: 0;
+    animation: letterEntry 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.letter1 {
+    left: 5px;
+    bottom: -10px;
+}
+
+.letter2 {
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-delay: 2.3s;
+}
+
+.letter3 {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 2.6s;
+}
+
+.letter4 {
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    animation-delay: 2.9s;
+}
+
+/* Collage Entrance */
+@keyframes collageEntry {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* Pictures Entrance */
+@keyframes photoEntry {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Letters Entrance */
+@keyframes letterEntry {
+    from {
+        opacity: 0;
+        scale: 0.2;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* Hover Effect */
+.photo:hover {
+    background-size: 120%;
+    transition: background-size 0.6s ease;
+}
+
+/* Collage Hover */
+.collage:hover {
+    transform: scale(1.03);
+    transition: 0.5s ease;
+    box-shadow: 0 0 35px rgba(255, 150, 210, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .collage {
+        width: 280px;
+        height: 480px;
+    }
+
+    .letter {
+        font-size: 90px;
+    }
+}
+
+
+
+/* I LOVE U Layout */
+
+body {
+    overflow-x: hidden;
+}
+
+.love-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    width: 100%;
+}
+
+/* Side Letters */
+
+.side-letter {
+    font-size: 150px;
+    font-weight: bold;
+    font-family: Georgia, serif;
+    color: white;
+    text-shadow:
+        0 0 10px #ff8bd5,
+        0 0 25px #ff69b4,
+        0 0 45px #ff1493;
+
+    animation: sideEntry 1.5s ease forwards,
+               sideGlow 2s ease-in-out infinite alternate;
+}
+
+/* Left I */
+
+.left-letter {
+    animation-delay: 0.2s, 1.5s;
+}
+
+/* Right U */
+
+.right-letter {
+    animation-delay: 0.5s, 1.5s;
+}
+
+/* Side Letter Animation */
+
+@keyframes sideEntry {
+    from {
+        opacity: 0;
+        transform: scale(0.2) translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes sideGlow {
+    from {
+        text-shadow: 0 0 10px #ff69b4;
+    }
+
+    to {
+        text-shadow:
+            0 0 15px #ff69b4,
+            0 0 35px #ff1493,
+            0 0 55px #ff8bd5;
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 650px) {
+    .love-layout {
+        gap: 10px;
+    }
+
+    .side-letter {
+        font-size: 65px;
+    }
+
+    .collage {
+        width: 220px;
+        height: 420px;
+    }
+
+    .letter {
+        font-size: 80px;
+    }
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    padding: 5px 18px;
+    background: #fff8e8;
+    color: #850d12;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: pink;
+    transform: translateY(-3px);
+}

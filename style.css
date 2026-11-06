@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7dce4;
+    padding-top: 0px;
+}
+
+/* Main Background */
+
+.birthday-card {
+    width: 100%;
+    height: 100vh;
+    min-height: 750px;
+    position: relative;
+    overflow: hidden;
+
+    background-color: #850d12;
+
+    background-image:
+    repeating-linear-gradient(
+        0deg,
+        transparent 0 39px,
+        rgba(255,255,255,0.04) 40px
+    ),
+    repeating-linear-gradient(
+        90deg,
+        transparent 0 39px,
+        rgba(255,255,255,0.04) 40px
+    );
+}
+
+/* Main Content */
+
+.content {
+    position: absolute;
+    top: 17%;
+    left: 8%;
+    width: 43%;
+    text-align: center;
+    color: #fff5df;
+}
+
+.content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 130px;
+    line-height: 1.1;
+}
+
+.content p {
+    font-size: 18px;
+    margin: 25px 0;
+    line-height: 1.6;
+}
+
+/* Button */
+
+.btn {
+    display: inline-block;
+    padding: 15px 45px;
+    background: #fff8e8;
+    color: #850d12;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: pink;
+    transform: translateY(-3px);
+}
+
+/* Photos */
+
+.photos {
+    position: absolute;
+    width: 43%;
+    height: 75%;
+    right: 5%;
+    top: 10%;
+}
+
+.main-photo {
+    position: absolute;
+    width: 65%;
+    height: 62%;
+    right: 12%;
+    top: 8%;
+    padding: 12px;
+    background: #fff8e8;
+    border: 7px dotted #fff8e8;
+    transform: rotate(2deg);
+}
+
+.main-photo img,
+.small-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.small-photo {
+    position: absolute;
+    width: 34%;
+    height: 30%;
+    left: 3%;
+    top: 48%;
+    padding: 8px;
+    background: #fff8e8;
+    border: 5px dotted #fff8e8;
+    transform: rotate(-8deg);
+}
+
+.ribbon {
+    position: absolute;
+    top: 0;
+    right: 60%;
+    font-size: 75px;
+}
+
+.name-card {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 47%;
+    height: 235px;
+    background: #fffbea;
+    color: #850d12;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-family: 'Great Vibes', cursive;
+    font-size: 65px;
+
+    transform: rotate(2deg);
+}
+
+/* Corner Bows */
+
+.bow {
+    position: absolute;
+    top: 3%;
+    color: #fff5df;
+    font-size: 100px;
+}
+
+.left {
+    left: 2%;
+}
+
+.right {
+    right: 2%;
+}
+
+/* Bottom Lace */
+
+.lace {
+    position: absolute;
+    bottom: 6%;
+    width: 100%;
+    height: 40px;
+    background: #fff8e8;
+    border-top: 5px dotted #850d12;
+    border-bottom: 5px dotted #850d12;
+}
+
+.pink-strip {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 6%;
+    background:
+    repeating-linear-gradient(
+        90deg,
+        #f4b9c8 0 10px,
+        white 11px 13px
+    );
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 767px) {
+
+    .birthday-card {
+        height: 850px;
+    }
+
+    .content {
+        top: 10%;
+        left: 5%;
+        width: 90%;
+    }
+
+    .content h1 {
+        font-size: 85px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+
+    .photos {
+        top: 48%;
+        right: 3%;
+        width: 94%;
+        height: 43%;
+    }
+
+    .main-photo {
+        width: 62%;
+        height: 75%;
+    }
+
+    .small-photo {
+        width: 34%;
+        height: 38%;
+    }
+
+    .name-card {
+        height: 120px;
+        font-size: 40px;
+    }
+
+    .bow {
+        font-size: 50px;
+    }
+
+    .ribbon {
+        font-size: 45px;
+    }
+}

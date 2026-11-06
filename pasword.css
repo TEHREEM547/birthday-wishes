@@ -1,0 +1,176 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    font-family: Arial, sans-serif;
+}
+
+/* Lock Screen */
+
+.lock-screen {
+    width: 320px;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.6)),
+        url("images/bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+}
+
+/* Heading */
+
+.title {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+/* Password Dots */
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.dot.active {
+    background: white;
+}
+
+/* Keypad */
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 65px);
+    justify-content: center;
+    gap: 15px 20px;
+}
+
+.keypad button {
+    width: 65px;
+    height: 65px;
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.keypad button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.08);
+}
+
+.keypad button:active {
+    background: white;
+    color: black;
+}
+
+.keypad .empty {
+    visibility: hidden;
+}
+
+.keypad .delete {
+    font-size: 23px;
+}
+
+/* Message */
+
+.message {
+    height: 25px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #ffb8b8;
+}
+
+/* Wrong Password Animation */
+
+.shake {
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-8px);
+    }
+
+    50% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-8px);
+    }
+}
+
+/* Success Screen */
+
+.success-screen {
+    display: none;
+    text-align: center;
+    color: rgb(221, 120, 120);
+}
+
+.success-screen h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.success-screen p {
+    margin-bottom: 20px;
+}
+
+
+.success-screen button {
+    padding: 12px 25px;
+    background: rgb(11, 11, 11);
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Mobile Responsive */
+
+@media(max-height: 700px) {
+    .lock-screen {
+        height: 95vh;
+    }
+}

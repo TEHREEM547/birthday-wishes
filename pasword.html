@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Lock Screen</title>
+    <link rel="stylesheet" href="pasword.css">
+</head>
+<body>
+
+    <div class="lock-screen" id="lockScreen">
+
+        <div class="content">
+
+            <p class="title">ENTER PASSCODE</p>
+
+            <!-- Password Dots -->
+            <div class="dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <!-- Number Buttons -->
+            <div class="keypad">
+
+                <button onclick="addNumber('1')">1</button>
+                <button onclick="addNumber('2')">2</button>
+                <button onclick="addNumber('3')">3</button>
+
+                <button onclick="addNumber('4')">4</button>
+                <button onclick="addNumber('5')">5</button>
+                <button onclick="addNumber('6')">6</button>
+
+                <button onclick="addNumber('7')">7</button>
+                <button onclick="addNumber('8')">8</button>
+                <button onclick="addNumber('9')">9</button>
+
+                <button class="empty"></button>
+                <button onclick="addNumber('0')">0</button>
+                <button onclick="deleteNumber()" class="delete">
+                    ⌫
+                </button>
+
+            </div>
+
+            <p class="message" id="message"></p>
+
+        </div>
+    </div>
+
+    <!-- Success Screen -->
+    <div class="success-screen" id="successScreen">
+        <h1>🔓 Unlocked!</h1>
+        <p>Welcome❤️</p>
+        <button onclick="location.reload(index.html)">
+            <a href="index.html" class="btn">
+             <p style="color: rgb(226, 120, 120);">OPEN!</p>  
+            
+            </a> </button>
+    </div>
+
+    <script src="pasword.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5eee2;
+    font-family: Georgia, serif;
+}
+
+.birthday-card {
+    width: 700px;
+    height: 450px;
+    background: #fffaf0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #c8bda9;
+    border: 10px solid #eee4d2;
+}
+
+/* Photos */
+
+.photo {
+    position: absolute;
+    background: white;
+    padding: 8px;
+    box-shadow: 2px 4px 8px #aaa;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo1 {
+    width: 170px;
+    height: 155px;
+    top: 15px;
+    left: 25px;
+    transform: rotate(-7deg);
+}
+
+.photo2 {
+    width: 140px;
+    height: 180px;
+    top: 15px;
+    right: 25px;
+    transform: rotate(7deg);
+}
+
+.photo3 {
+    width: 135px;
+    height: 130px;
+    bottom: 35px;
+    left: 65px;
+    transform: rotate(-8deg);
+}
+
+.photo4 {
+    width: 180px;
+    height: 115px;
+    bottom: 35px;
+    left: 255px;
+    transform: rotate(3deg);
+}
+
+.photo5 {
+    width: 135px;
+    height: 105px;
+    bottom: 30px;
+    right: 25px;
+    transform: rotate(6deg);
+}
+
+/* Notes */
+
+.note {
+    position: absolute;
+    background: #fffdf5;
+    padding: 12px;
+    font-size: 12px;
+    text-align: center;
+    color: #555;
+    box-shadow: 2px 3px 6px #ccc;
+    border: 1px solid #e5dccb;
+}
+
+.note1 {
+    top: 20px;
+    left: 240px;
+    width: 140px;
+    transform: rotate(4deg);
+}
+
+.note2 {
+    bottom: 145px;
+    right: 20px;
+    width: 145px;
+    transform: rotate(-5deg);
+}
+
+/* Birthday Text */
+
+h1 {
+    position: absolute;
+    top: 165px;
+    left: 190px;
+    width: 300px;
+    text-align: center;
+    color: #d74762;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    font-weight: bold;
+    transform: rotate(-3deg);
+    text-shadow: 2px 2px #f5b6b9;
+}
+
+h1 span {
+    display: block;
+    letter-spacing: 4px;
+}
+
+/* Footer */
+
+.footer {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    color: #a47a65;
+}
